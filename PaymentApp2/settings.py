@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
 
     'userauths',
     'account',
@@ -70,7 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                #'account.context_processors.kyc_context_processor'
+                'account.context_processors.kyc_context_processor',
             ],
         },
     },

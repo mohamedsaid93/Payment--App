@@ -5,7 +5,7 @@ class CreditCardForm(forms.ModelForm):
     # name = forms.CharField(widget=forms.TextInput(attrs={"placeholder":"Card Holder Name"}))
     # number = forms.IntegerField(widget=forms.TextInput(attrs={"placeholder":"Card Number"}))
     # month = forms.IntegerField(widget=forms.TextInput(attrs={"placeholder":"Expiry Month"}))
-    # year = forms.IntegerField(widget=forms.TextInput(attrs={"placeholder":"Card Year"}))
+    # year = forms.IntegerField(widget=forms.TextInput(attrs={"placeholder":"Expiry Year"}))
     # cvv = forms.IntegerField(widget=forms.TextInput(attrs={"placeholder":"CVV"}))
     
     class Meta:
@@ -15,6 +15,6 @@ class CreditCardForm(forms.ModelForm):
             "name": forms.TextInput(attrs={"placeholder":"Card Holder Name"}),
             "number": forms.TextInput(attrs={"placeholder":"Card Number"}),
             "month": forms.TextInput(attrs={"placeholder":"Expiry Month"}),
-            "year": forms.TextInput(attrs={"placeholder":"Card Year"}),
+            "year": forms.TextInput(attrs={"placeholder":"Expiry Year"}),
             "cvv": forms.TextInput(attrs={"placeholder":"CVV"}),
         }
