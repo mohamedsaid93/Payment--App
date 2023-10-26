@@ -232,8 +232,8 @@ def dashboard(request):
 
 
 def delete_account(request):
-    account = Account.objects.get(user=request.user)
-    account.delete()
+    user = request.user
+    user.delete()
     logout(request)
     messages.success(request, 'Your account have been deleted.')
     return redirect("userauths:sign-in")
