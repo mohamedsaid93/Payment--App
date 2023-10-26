@@ -134,8 +134,8 @@
                                                                 <p class="mdr">{{r.transaction_type | title}}</p>
                                                             </th>
                                                             <td>
-                                                                <p>{{r.date | date:'h:i'}}</p>
                                                                 <p class="mdr">{{r.date | date:'d M, Y'}}</p>
+                                                                <p>{{r.date | time:'H:i'}}</p>
                                                             </td>
                                                             <td>
                                                                 {% if r.status == 'completed' %}
@@ -193,8 +193,8 @@
                                                                 <p class="mdr">{{s.transaction_type | title}}</p>
                                                             </th>
                                                             <td>
-                                                                <p>{{s.date | date:'h:i'}}</p>
                                                                 <p class="mdr">{{s.date | date:'d M, Y'}}</p>
+                                                                <p>{{s.date | time:'H:i'}}</p>
                                                             </td>
                                                             <td>
                                                                 {% if s.status == 'completed' %}
@@ -276,8 +276,8 @@
                                                                 <p class="mdr">{{r.transaction_type | title}}</p>
                                                             </th>
                                                             <td>
-                                                                <p>{{r.date | date:'h:i'}}</p>
-                                                                <p class="mdr">{{s.date | date:'d M, Y'}}</p>
+                                                                <p class="mdr">{{r.date | date:'d M, Y'}}</p>
+                                                                <p>{{r.date | time:'H:i'}}</p>
                                                             </td>
                                                             <td>
                                                                 {% if r.status == 'completed' %}

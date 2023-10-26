@@ -58,7 +58,7 @@
                                 </select>
                             </div>
                             
-                            <p>Available Balance<b>{{request.user.account.account_balance | intcomma}}</b></p>
+                            <p>Available Balance<b>£ {{request.user.account.account_balance | intcomma}}</b></p>
                             <p id="new_balance"></p>
                             <p class="test-danger" id="error-div"></p>
 
@@ -88,12 +88,12 @@
 
                                 new_bal = available_balance - sendAmount
 
-                                new_balance.innerHTML = `New Balance <B> $${new_bal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} </B> `;
-                                total_to_pay.innerHTML = `USD <B> $${sendAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} </B> `;
+                                new_balance.innerHTML = `New Balance <B> £${new_bal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} </B> `;
+                                total_to_pay.innerHTML = `<B> £${sendAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} </B> `;
 
                                 if (new_bal < 0){
                                     new_balance.style.color = "red"
-                                    alert("You can only send $" + available_balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
+                                    alert("You can only send £" + available_balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
                                 } else {
                                     new_balance.style.color = "#27276e"
                                 }

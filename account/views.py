@@ -3,6 +3,7 @@ from account.models import Account, KYC
 from account.forms import KYCForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
 from core.forms import CreditCardForm
 from core.models import CreditCard
 import datetime
@@ -228,3 +229,11 @@ def dashboard(request):
     }
 
     return render(request , 'account/dashboard.html', context)
+
+
+def delete_account(request):
+    account = Account.objects.get(user=request.user)
+    account.delete()
+    logout(request)
+    messages.success(request, 'Your account have been deleted.')
+    return redirect("userauths:sign-in")

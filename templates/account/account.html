@@ -63,7 +63,7 @@
                                         <img src="{% static 'assets/images/icon/logout.png' %}" alt="image">
                                         Logout
                                     </a>
-                                    <a href="javascript:void(0)" class="delete">
+                                    <a href="{% url "account:delete-account" %}" class="delete">
                                         <img src="{% static 'assets/images/icon/delete-2.png' %}" alt="image">
                                         Delete Account
                                     </a>
